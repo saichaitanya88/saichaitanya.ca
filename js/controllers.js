@@ -9,7 +9,17 @@ ctrls.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
 	$scope.revealEmail = function() {
 		$scope.email = 'saichaitanya88@gmail.com';
 	}
-  $(document).ready(function(){
-    $('.collapsible').collapsible();
+  // $(document).ready(function(){
+  // });
+  angular.element(document).ready(function(){
+  	$('.collapsible').collapsible();
+  	var eventDate = {
+		  hitType: 'click',
+		  eventCategory: window.location.hash,
+		  eventAction: 'click',
+		  eventLabel: window.location.hash
+		};
+		//console.log(eventDate);
+  	ga('send', eventDate);
   });
 }]);
