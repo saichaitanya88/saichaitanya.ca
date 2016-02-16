@@ -6,7 +6,7 @@ ctrls.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
 	$scope.revealPhone = function() {
 		$scope.phone = '416 897 1656';
 		var eventDate = {
-		  hitType: 'click',
+		  hitType: 'event',
 		  eventCategory: 'revealPhone',
 		  eventAction: 'click',
 		  eventLabel: window.location.hash
@@ -16,7 +16,7 @@ ctrls.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
 	$scope.revealEmail = function() {
 		$scope.email = 'saichaitanya88@gmail.com';
 		var eventDate = {
-		  hitType: 'click',
+		  hitType: 'event',
 		  eventCategory: 'revealEmail',
 		  eventAction: 'click',
 		  eventLabel: window.location.hash
@@ -28,7 +28,7 @@ ctrls.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
   angular.element(document).ready(function(){
   	$('.collapsible').collapsible();
   	var eventDate = {
-		  hitType: 'click',
+		  hitType: 'event',
 		  eventCategory: window.location.hash,
 		  eventAction: 'click',
 		  eventLabel: window.location.hash
