@@ -17,5 +17,6 @@ ctrls.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
   	// }
   	$('.collapsible').collapsible();
   	ga('send', 'event', window.location.hash, 'click', window.location.hash);
+    
   });
 }]);
