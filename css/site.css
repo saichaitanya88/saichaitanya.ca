@@ -1,0 +1,112 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    /*background-image:url("../assets/bg.png");*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #373737;
+}
+#main {
+    flex: 1 0 auto;
+    margin-top:5%;
+}
+nav {
+    box-shadow: none;
+}
+nav ul a:hover {
+    background-color: rgba(220,208,192,0.1);
+    color: #dcd0c0;
+}
+div.opaque{
+    background: cadetblue
+}
+div.nav-wrapper.opaque { 
+    background: #373737;
+}
+.card{
+    box-shadow: none;
+}
+.circle{
+    border-radius: 50% !important;
+}
+ul.flow-text li{
+    margin-left:30px;
+}
+ul.flow-text li{
+    list-style: circle;
+}
+.clickable{
+    cursor: pointer;
+}
+.nowrap {
+    white-space: nowrap ;
+}
+a {
+    /*color: #FFAB40;*/
+}
+#mobile-nav li a {
+    color: #FFAB40;
+}
+#mobile-nav li:hover {
+    background-color: #424242;
+}
+.footer-copyright{
+    background: cadetblue !important;
+}
+.footer-copyright a{
+    font-weight: bold;
+}
+footer.page-footer{
+    margin-top:0px;
+    padding-top: 0px;
+}
+.collapsible-body {
+    background: cadetblue;
+    padding: 20px;
+}
+
+.block{
+    padding-right:5%;
+    padding-left:5%;
+    border-bottom: 1px #ccc solid;
+    margin-bottom: 5px;
+}
+.color-a{
+    background-color:#FBFBFC;
+}
+.color-b{
+    background-color: #FCFBFC;
+}
+.color-c{
+    background-color:#FBFCFC;
+}
+.color-d{
+    background-color: #e0e0e0;
+}
+nav .brand-logo{
+    color: #c0b283;
+}
+h5,.h5{
+    font-size:1.25em;
+}
+h4{
+    margin-top:0px;
+    padding-top:0.82rem;
+    margin-bottom:0px;
+    font-size:1.5em;
+}
+svg{
+    fill: none;
+    stroke: black;
+}
+.container .row{
+    margin:0px;
+}
+.current-badge{
+    font-size: 0.8em;background-color: green;padding: 4px 10px;border-radius: 5px;color: white;
+}
+#phone, #email{
+    cursor: pointer;
+}

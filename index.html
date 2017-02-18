@@ -1,136 +1,248 @@
+<!DOCTYPE html>
+<html ng-app="app">
 
-  <!DOCTYPE html>
-  <html ng-app="app">
-    <head>
-      <title>Sai Chaitanya</title>
-      <!-- <base href="/"> -->
-      <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-      <meta content="utf-8" http-equiv="encoding">
-      <!--Import Google Icon Font-->
-      <link href="css/icons.css" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script type="text/javascript" src="js/angular.js"></script>
-      <script type="text/javascript" src="js/angular-route.js"></script>
-      <script type="text/javascript" src="js/app.js"></script>
-      <script type="text/javascript" src="js/controllers.js"></script>
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
+<head>
+    <title>Sai Chaitanya</title>
+    <!-- <base href="/"> -->
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <!--Import Google Icon Font-->
+    <link href="css/icons.css" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link href="css/site.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/site.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
         ga('create', 'UA-73831602-1', 'auto');
         ga('send', 'pageview');
+    </script>
+</head>
 
-      </script>
-      <style>
-        body {
-          display: flex;
-          min-height: 100vh;
-          flex-direction: column;
-          background-image:url("assets/bg.png");
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: cover;
-        }
-        #main {
-          flex: 1 0 auto;
-        }
-        nav {
-          box-shadow: none;
-        }
-        div.opaque{
-          background: cadetblue
-        }
-        div.nav-wrapper.opaque { 
-          background: #fc4a1a;
-        }
-        .card{
-          box-shadow: none;
-        }
-        ul.flow-text li{
-          margin-left:30px;
-        }
-        ul.flow-text li{
-          list-style: circle;
-        }
-        .clickable{
-          cursor: pointer;
-        }
-        .nowrap {
-          white-space: nowrap ;
-        }
-        a {
-          color: #FFAB40;
-        }
-        #mobile-nav li a {
-          color: #FFAB40;
-        }
-        #mobile-nav li:hover {
-          background-color: #424242;
-        }
-        .footer-copyright{
-          background: cadetblue !important;
-        }
-        .footer-copyright a{
-          font-weight: bold;
-        }
-        .collapsible-body {
-          background: cadetblue;
-          padding: 20px;
-        }
-      </style>
-    </head>
-    <body>
-        <header>
-          <nav class="transparent">
-            <div class="nav-wrapper opaque">
-              <a href="#" data-activates="mobile-nav" id="mobile-nav-menu" class="button-collapse hide-on-med-and-up"><i class="material-icons">menu</i></a>
-              <a href="#!" class="brand-logo left" style="margin-left:40px;">Sai Chaitanya</a>
-              <ul class="right hide-on-small-and-down">
-                <li><a ng-href="#/work-experience">Work Experience</a></li>
-                <li><a ng-href="#/education">Education</a></li>
-                <li><a ng-href="#/work-samples">Samples</a></li>
-                <li><a ng-href="#/bio">Bio</a></li>
-              </ul>
-              <ul class="side-nav grey darken-4" id="mobile-nav" onclick="closeNavbar()">
-                <li><a class="waves-effect waves-light" ng-href="#/work-experience">Work Experience</a></li>
-                <li><a class="waves-effect waves-light" ng-href="#/education">Education</a></li>
-                <li><a class="waves-effect waves-light" ng-href="#/work-samples">Samples</a></li>
-                <li><a class="waves-effect waves-light" ng-href="#/bio">Bio</a></li>
-              </ul>
+<body>
+    <main class="container scrollspy" id="main">
+        <div class="row">
+            <div class="col m3 hide-on-small-only">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="circle" src="/assets/profile.png" />
+                    </div>
+                    <div class="right-align collection">
+                        <a class="collection-item blue-text text-darken-3" href="#experience">Experience</a>
+                        <a class="collection-item blue-text text-darken-3" href="#education">Education</a>
+                        <a class="collection-item blue-text text-darken-3" href="#samples">Samples</a>
+                        <a class="collection-item blue-text text-darken-3" href="#contact">Contact</a>
+                    </div>
+                </div>
             </div>
-          </nav>
-        </header>
-        <main class="container" id="main">
-          <div class="view-container">
-            <div ng-view class="view-frame"></div>
-          </div>
-        </main>
-        <footer class="page-footer transparent">
-          <div class="footer-copyright">
-            <div class="container">
-              <span style="margin-left:10px;"><a href="https://github.com/saichaitanya88">GITHUB</a></span>
-              <span class="orange-text" style="margin-left:10px;"><a href="https://ca.linkedin.com/in/sai-chaitanya-77314754">LINKED IN</a></span>
-              <span class="orange-text" style="margin-left:10px;"><a href="http://softwaregrizzlybear.wordpress.com">BLOG</a></span>
+            <div class="col m9 s12">
+                <div class="view-container">
+                    <div class="block scrollspy color-b" id="bio">
+                        <h4>Who am I</h4>
+                        <svg xml:space="preserve" viewBox="0 0 69.172 14.975" width="37" height="28" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <path d="M1.357,12.26 10.807,2.81 20.328,12.332
+        29.781,2.879 39.223,12.321 48.754,2.79 58.286,12.321 67.815,2.793 " style="stroke-dasharray: 93.9851, 93.9851; stroke-dashoffset: 0;"></path>
+                        </svg>
+                        <div class="row">
+                            <ul>
+                                <li>Sai Chaitanya Cherukumilli is a Professional Software Engineer experienced in Web and Full Stack Development.</li>
+                                <li>He believes in a do-it-yourself attitude and building things from scratch. 
+                                    He wants to live in a world where technology can be used to solve all the mundane "what if we could?" problems.
+                                </li>
+                                <li>He loves coffee and quiet sunday afternoons.</li>
+                                <li>His better half is Indrani Gorti, who is also a software engineer specializing in Data Science and Machine Learning.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="block scrollspy color-a" id="experience">
+                        <h4>Experience</h4>
+                        <svg xml:space="preserve" viewBox="0 0 69.172 14.975" width="37" height="28" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <path d="M1.357,12.26 10.807,2.81 20.328,12.332
+              29.781,2.879 39.223,12.321 48.754,2.79 58.286,12.321 67.815,2.793 " style="stroke-dasharray: 93.9851, 93.9851; stroke-dashoffset: 0;"></path>
+                        </svg>
+                        <div class='section'>
+                            <div class="row">
+                                <span class="h5">Software Engineer - nLogic</span>
+                                <span class="current-badge">Current</span>
+                            </div>
+                            <div class="row">
+                                <div>NLogic provides statistically accurate representation of TV and Radio listeners in Canada to Advertisers, and Broadcasters. This data is treated as the go-to data and is exclusively used to set the prices for commercial spots. My role as a Software Engineer is primarily working on a platform used by the Radio and TV Industry to get reports and analyses regarding the Program, Station, and Advertisement ratings. Additionally, I have also introduced a collaboration module that will be primarily used by the industry to buy/sell TV and Radio commercial spots. The platform's backend is powered by .NET Core, with the frontend powered by Angular2 and Bootstrap.
+                                </div>
+                            </div>
+                        </div>
+                        <div class='section'>
+                            <div class="row">
+                                <h5>Software Engineer - Gryphtech</h5>
+                            </div>
+                            <div>Gryphtech is a primary software provider for Remax across 80 different countries. During my time at Gryphtech, I was responsible for building an application for Real Estate Brokerages to manage their back office transactions, customer relations and agent billing. The transactions, agent billing were integrated with Intuit QuickBooks.
+                            </div>
+                        </div>
+                        <div class='section'>
+                            <h5>Automation Developer - Couch and Associates Inc.</h5>
+                            <div>Couch &amp; Associates Inc. is a marketing consulting company with many high profile clients like Oracle, Dunn and Bradstreet, Wolters Kluwer, Intrawest etc. As a Software Developer at Couch &amp; Associates, I have worked on a lot of marketing automation contracts with such clients. The applications provided integrations with Eloqua, Salesforce and Marketo and were implemented using languages and technologies that the clients preferred. I had also been responsible for managing the applications on Amazon Web Services, managing the company's Team Foundation Server, deploying applications between Development, Staging and Production environments. I had also managed an outsourced team in India to foresee development of projects. I worked on technology stacks ranging from legacy VB.NET 2.0 to AngularJS and Ruby on Rails.</div>
+                        </div>
+                    </div>
+                    <div class="block scrollspy color-b" id="education">
+                        <h4>Education</h4>
+                        <svg xml:space="preserve" viewBox="0 0 69.172 14.975" width="37" height="28" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <path d="M1.357,12.26 10.807,2.81 20.328,12.332
+              29.781,2.879 39.223,12.321 48.754,2.79 58.286,12.321 67.815,2.793 " style="stroke-dasharray: 93.9851, 93.9851; stroke-dashoffset: 0;"></path>
+                        </svg>
+                        <div class=''>
+                            <h5>Masters of Computer Science - Ryerson University</h5>
+                            <ul>
+                              <li>
+                                <a href="http://digital.library.ryerson.ca/islandora/object/RULA%3A2445" target="_blank">
+                                  Thesis: Designing and evaluating an interface for the composition of Vibro-Tactile patterns using Gestures.
+                                </a>
+                              </li>
+                              <li><b>Ryerson Graduate Scholarship</b></li>
+                              <li>Human Computer Interaction</li>
+                              <li>Fuzzy Logic Systems</li>
+                              <li>Digital Signal Processing</li>
+                              <li>Computer Vision</li>
+                              <li>Software Engineering</li>
+                            </ul>
+                        </div>
+                        <div class=''>
+                            <h5>Bachelors of Computer Engineering - Ryerson University</h5>
+                            <ul>
+                              <li>Software Engineering</li>
+                              <li>Embedded Computer Systems</li>
+                              <li>Robotics</li>
+                              <li>Databases</li>
+                              <li>Computer Networking</li>
+                            </ul>
+                        </div>
+                        <div class=''>
+                            <h5>Certifications</h5>
+                            <ul>
+                              <li>Intro to Hadoop and Map Reduce</li>
+                              <li>Microsoft Certified Professional - Programming in HTML5, JS and CSS</li>
+                              <li>Mongo for DBAs Mongo for Node.js Developers</li>
+                              <li>Oracle Certified Java SE6 Programmer MySQL 5 Certified Associate</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="block scrollspy color-a" id="bio">
+                        <h4>Services</h4>
+                        <svg xml:space="preserve" viewBox="0 0 69.172 14.975" width="37" height="28" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <path d="M1.357,12.26 10.807,2.81 20.328,12.332
+        29.781,2.879 39.223,12.321 48.754,2.79 58.286,12.321 67.815,2.793 " style="stroke-dasharray: 93.9851, 93.9851; stroke-dashoffset: 0;"></path>
+                        </svg>
+                        <div class="row">
+                          <ul>
+                            <li>Website Development</li>
+                            <li>Application Development</li>
+                            <li>Automation Services</li>
+                            <li>Integration Services - Salesforce, Quickbooks, Eloqua, Marketo, etc.</li>
+                            <li>Consulting</li>
+                          </ul>
+                        </div>
+                    </div>
+                    <div class="block scrollspy color-c" id="samples">
+                        <h4>Samples and Hobbies</h4>
+                        <svg xml:space="preserve" viewBox="0 0 69.172 14.975" width="37" height="28" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <path d="M1.357,12.26 10.807,2.81 20.328,12.332
+              29.781,2.879 39.223,12.321 48.754,2.79 58.286,12.321 67.815,2.793 " style="stroke-dasharray: 93.9851, 93.9851; stroke-dashoffset: 0;"></path>
+                        </svg>
+                        <div class="section">
+                            <div class="row">
+                                <div class="col s12 m4">
+                                    <div class="center promo">
+                                        <i class="material-icons large">videogame_asset</i>
+                                        <p class="promo-caption"><a href="https://softwaregrizzlybear.wordpress.com/2016/11/03/game-development-update-20161103/">Game development</a>
+                                        </p>
+                                        <p class="light center">2D Platformer game with Scala/LibGDX</p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="center promo">
+                                        <i class="material-icons large">local_dining</i>
+                                        <p class="promo-caption"><a href="https://softwaregrizzlybear.wordpress.com/2016/04/09/nom3-look-up-and-discover-recipes-by-selecting-ingredients/">Cooking and Recipes</a>
+                                        </p>
+                                        <p class="light center">Look Up and Discover Recipes by Selecting Ingredients</p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="center promo">
+                                        <i class="material-icons large">forum</i>
+                                        <p class="promo-caption"><a href="https://softwaregrizzlybear.wordpress.com/2016/01/30/secure-chat-with-socketio-nodejs-and-aes-encryption/">Secure Chatting</a>
+                                        </p>
+                                        <p class="light center">Secure Chat with SocketIO, NodeJS and AES Encryption</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 m4">
+                                    <div class="center promo">
+                                        <i class="material-icons large">web</i>
+                                        <p class="promo-caption"><a href="https://softwaregrizzlybear.wordpress.com/2016/01/23/an-approach-to-multi-tenant-applications-with-mongodb/">Multi-tenant with MongoDB</a>
+                                        </p>
+                                        <p class="light center">An Approach to Multi-Tenant Applications with MongoDB</p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="center promo">
+                                        <i class="material-icons large">flash_on</i>
+                                        <p class="promo-caption"><a href="https://softwaregrizzlybear.wordpress.com/2016/01/18/real-time-push-notifications-in-a-distributed-environment-with-nodejs-rethinkdb-and-socket-io/">Real-time with Socket.IO and NodeJS</a>
+                                        </p>
+                                        <p class="light center">Real-time Push Notifications in a Distributed Environment with NodeJS, RethinkDB and Socket.IO</p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="center promo">
+                                        <i class="material-icons large">settings_system_daydream</i>
+                                        <p class="promo-caption">Data Analysis</p>
+                                        <p class="light center">Apache Spark and Scala</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block scrollspy color-b" style="margin-bottom:100px;" id="contact">
+                        <h4>Contact</h4>
+                        <svg xml:space="preserve" viewBox="0 0 69.172 14.975" width="37" height="28" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <path d="M1.357,12.26 10.807,2.81 20.328,12.332
+              29.781,2.879 39.223,12.321 48.754,2.79 58.286,12.321 67.815,2.793 " style="stroke-dasharray: 93.9851, 93.9851; stroke-dashoffset: 0;"></path>
+                        </svg>
+                        <div class="row">
+                            <div class="col s8 m12">
+                                <div>I am available for freelance work and consulting.</div>
+                                <ul>
+                                    <li>Phone: <span onclick="revealPhone()" id="phone">Reveal Phone</span></li>
+                                    <li>Email: <span onclick="revealEmail()" id="email">Reveal Email</span> </li>
+                                </ul>
+                            </div>
+                            <div class="col s4 hide-on-med-and-up">
+                                <img class="circle" style="width:100%" src="/assets/profile.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </footer>
-      <script type="text/javascript">
-        $(document).ready(function(){
-          $("#mobile-nav-menu.button-collapse").sideNav();
-        });
-        function closeNavbar(){
-          setTimeout(function(){
-            $('#mobile-nav-menu.button-collapse').sideNav('hide');
-          }, 250);
-        };
-      </script>
-    </body>
-  </html>
-        
+        </div>
+    </main>
+    <div class="fixed-action-btn hide-on-small-only" style="bottom: 45px; left: 24px;">
+      <a href="#main" class="btn-floating btn-large waves-light waves-effect" style="background-color:gray">
+        <i class="material-icons">navigation</i>
+      </a>
+    </div>
+</body>
+
+</html>
